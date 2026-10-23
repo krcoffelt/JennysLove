@@ -2,7 +2,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
-import { site } from "@/content/business";
+import { ogImage, site } from "@/content/business";
 import { author, formatDate, getPost, posts, readingMinutes, slugify, type Block } from "@/content/posts";
 import { PillLink, SectionLabel } from "@/components/ui";
 
@@ -18,7 +18,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: { absolute: post.title },
     description: post.description,
     alternates: { canonical: `/post/${post.slug}` },
-    openGraph: { type: "article", title: post.title, description: post.description, publishedTime: post.datePublished, modifiedTime: post.dateModified },
+    openGraph: { type: "article", title: post.title, description: post.description, publishedTime: post.datePublished, modifiedTime: post.dateModified, images: [ogImage] },
   };
 }
 

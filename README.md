@@ -31,6 +31,8 @@ Layout system modeled on the **Calma** Webflow template (Over Sight) — cream g
   - `desk-calculator.jpg` — https://www.pexels.com/photo/7654590/
   - `documents-desk.jpg` (home hero, cropped to exclude the face) — https://www.pexels.com/photo/8296998/
 
+Share image and favicons (`public/og-image.png`, `favicon.ico`, `icon.png`, `icon-192.png`, `apple-icon.png`) are generated from the logo and heart mark with `node scripts/brand-assets.mjs`.
+
 Hours follow Google Maps (every day 7am–8pm), per the client on 2026-10-23.
 
 ## Needs owner approval before launch
