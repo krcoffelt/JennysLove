@@ -75,7 +75,7 @@ export default function Home() {
           </div>
 
           <div className="md:col-span-6 md:col-start-7">
-            <figure className="relative">
+            <figure>
               <Image
                 src="/media/jenny-portrait.jpg"
                 alt="Jenny, owner of Jenny’s Love Accounting, smiling outdoors among autumn trees"
@@ -85,9 +85,6 @@ export default function Home() {
                 sizes="(min-width: 1240px) 580px, (min-width: 768px) 48vw, 100vw"
                 className="aspect-[4/5] w-full rounded-lg object-cover md:max-h-[42rem]"
               />
-              <figcaption className="absolute bottom-4 left-4 rounded-full bg-cream/90 px-4 py-2 font-serif text-base italic backdrop-blur-sm">
-                Hi, I’m Jenny.
-              </figcaption>
             </figure>
           </div>
         </div>
