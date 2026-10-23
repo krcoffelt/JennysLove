@@ -83,7 +83,7 @@ export function ContactForm() {
 
   if (status === "sent") {
     return (
-      <div ref={doneRef} tabIndex={-1} role="status" className="rounded-xl bg-paper p-8 outline-none md:p-12">
+      <div ref={doneRef} tabIndex={-1} role="status" className="rounded-xl bg-paper p-8 shadow-[0_24px_60px_-30px_rgb(61_23_25/0.35)] outline-none md:p-12">
         <p className="font-serif text-3xl leading-tight md:text-4xl">
           Thank you. <em className="text-heart">Your message is on its way.</em>
         </p>
@@ -103,8 +103,8 @@ export function ContactForm() {
 
   const errorList = Object.entries(errors) as [keyof Errors, string][];
   const field =
-    "mt-2 block w-full min-h-12 rounded-lg bg-cream px-4 py-3 font-sans text-[1rem] text-ink outline-none ring-1 ring-transparent transition-shadow duration-200 placeholder:text-ink-soft/60 focus:ring-2 focus:ring-heart aria-[invalid=true]:ring-2 aria-[invalid=true]:ring-heart";
-  const label = "font-sans text-[0.95rem] font-medium";
+    "mt-2 block w-full min-h-12 rounded-t-lg border-b-2 border-ink/60 bg-cream px-4 py-3 font-sans text-[1rem] text-ink outline-none transition-colors duration-200 placeholder:text-ink-soft/70 hover:border-ink focus:border-heart focus:bg-blush/40 aria-[invalid=true]:border-heart aria-[invalid=true]:bg-blush/50";
+  const label = "font-sans text-[0.95rem] font-semibold text-ink";
 
   return (
     <form
@@ -114,7 +114,7 @@ export function ContactForm() {
       noValidate
       onSubmit={onSubmit}
       onFocus={onFocus}
-      className="rounded-xl bg-paper p-6 sm:p-8 md:p-10"
+      className="rounded-xl bg-paper p-6 shadow-[0_24px_60px_-30px_rgb(61_23_25/0.35)] sm:p-8 md:p-10"
     >
       <input type="hidden" name="form-name" value="contact" />
       {/* Honeypot: hidden from people, filled by bots. */}
@@ -213,9 +213,9 @@ export function ContactForm() {
         <button
           type="submit"
           disabled={status === "sending"}
-          className="group inline-flex min-h-12 items-center gap-3 self-start rounded-full bg-ink py-1.5 pl-1.5 pr-6 font-sans text-[0.95rem] font-medium text-cream transition-colors duration-200 hover:bg-heart disabled:opacity-60 sm:self-auto"
+          className="group inline-flex min-h-12 items-center gap-3 self-start rounded-full bg-heart py-1.5 pl-1.5 pr-6 font-sans text-[0.95rem] font-semibold text-paper transition-colors duration-200 hover:bg-heart-dark disabled:opacity-60 sm:self-auto"
         >
-          <span className="grid size-9 place-items-center rounded-full bg-heart text-paper transition-colors duration-200 group-hover:bg-wine">
+          <span className="grid size-9 place-items-center rounded-full bg-paper text-heart">
             <ArrowIcon className="size-4" />
           </span>
           {status === "sending" ? "Sending…" : "Send message"}

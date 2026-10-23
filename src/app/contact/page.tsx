@@ -35,9 +35,9 @@ export default function ContactPage() {
               <a
                 href={business.phone.value.href}
                 data-event="phone_click"
-                className="group flex min-h-48 flex-col justify-between rounded-xl bg-wine p-8 text-cream transition-colors duration-300 hover:bg-wine-2"
+                className="group flex min-h-48 flex-col justify-between rounded-xl bg-heart p-8 text-paper transition-colors duration-300 hover:bg-heart-dark"
               >
-                <span className="font-sans text-xs uppercase tracking-[0.16em] text-cream/65">Call Jenny</span>
+                <span className="font-sans text-xs uppercase tracking-[0.16em] text-paper/80">Call Jenny</span>
                 <span className="mt-10 flex items-end justify-between gap-4">
                   <span className="font-serif text-4xl">{business.phone.value.display}</span>
                   <ArrowIcon className="mb-1 size-7 shrink-0 transition-transform duration-200 group-hover:translate-x-1" />

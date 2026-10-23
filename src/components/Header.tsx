@@ -66,7 +66,7 @@ export function Header() {
                 <a
                   href={business.phone.value.href}
                   data-event="phone_click"
-                  className="inline-flex min-h-11 items-center rounded-full bg-ink px-5 text-cream transition-colors duration-200 hover:bg-heart"
+                  className="inline-flex min-h-11 items-center rounded-full bg-heart px-5 text-paper transition-colors duration-200 hover:bg-heart-dark"
                 >
                   {business.phone.value.display}
                 </a>
@@ -105,7 +105,7 @@ export function Header() {
           <a
             href={business.phone.value.href}
             data-event="phone_click"
-            className="mt-5 flex min-h-12 items-center justify-center rounded-full bg-ink font-sans text-cream"
+            className="mt-5 flex min-h-12 items-center justify-center rounded-full bg-heart font-sans text-paper"
           >
             Call {business.phone.value.display}
           </a>

@@ -21,7 +21,7 @@ export function SectionLabel({ children, tone = "ink" }: { children: ReactNode; 
   return (
     <p
       className={`flex items-center gap-2 font-sans text-sm tracking-wide ${
-        tone === "light" ? "text-cream/80" : "text-ink-soft"
+        tone === "light" ? "text-cream/85" : "font-semibold text-heart"
       }`}
     >
       <HeartGlyph className="h-3 w-3 text-heart" />
@@ -44,9 +44,9 @@ export function PillLink({ href, children, tone = "light", event, className = ""
     "group inline-flex min-h-12 items-center gap-3 rounded-full py-1.5 pl-1.5 pr-6 font-sans text-[0.95rem] font-medium transition-[background-color,box-shadow,transform] duration-200 ease-out hover:-translate-y-px";
   const tones =
     tone === "dark"
-      ? "bg-cream text-ink shadow-[0_1px_0_rgb(0_0_0/0.05)] hover:bg-paper"
-      : "bg-paper text-ink hover:bg-blush/50 hover:shadow-[0_8px_24px_-12px_rgb(43_33_31/0.35)]";
-  const dot = tone === "dark" ? "bg-wine text-cream" : "bg-heart text-paper";
+      ? "bg-paper text-ink hover:bg-cream"
+      : "bg-heart text-paper hover:bg-heart-dark hover:shadow-[0_8px_24px_-12px_rgb(43_33_31/0.35)]";
+  const dot = tone === "dark" ? "bg-heart text-paper" : "bg-paper text-heart";
   const inner = (
     <>
       <span className={`grid size-9 place-items-center rounded-full ${dot} transition-transform duration-200 group-hover:rotate-[-8deg]`}>
