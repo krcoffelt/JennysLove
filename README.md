@@ -1,36 +1,48 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Jenny’s Love Accounting — site rebuild (staging)
 
-## Getting Started
+Next.js 15 · Tailwind CSS 4 · TypeScript. Static output; no database (the parent Hometown Supabase requirement does not apply here).
 
-First, run the development server:
+Deploys on Netlify (`netlify.toml`). Set `SITE_ENV=production` in Netlify only when launch is authorized; until then every build is noindex.
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
+npm run dev        # http://localhost:3000
+npm run build      # staging build: noindex + robots Disallow
+SITE_ENV=production npm run build   # only after separately authorized launch
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Design reference
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Layout system modeled on the **Calma** Webflow template (Over Sight) — cream ground, Lora serif headlines, “Meet ___” owner hero, dark value cards, ruled service list, a dark band, a visit section, “Words from the Heart” testimonials, and a dark closing CTA + footer. Rebuilt from scratch in code (no template files, images or code copied); recolored to Jenny’s brand: ivory `#f6f1e7`, ink `#2b211f`, logo red `#af1f25` (sampled), wine `#3d1719`. Fonts: Lora + Open Sans (SIL OFL, self-hosted via `next/font`).
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Where things live
 
-## Learn More
+- `src/content/business.ts` — single source for name, phone, email, address, hours, experience. Each fact carries source, approval and verified date.
+- `src/content/services.ts` — services, extras, software (condensed from the live /our-services).
+- `src/content/posts/*.json` — both live articles, preserved verbatim from the crawl.
+- All seven live paths are kept: `/`, `/about`, `/our-services`, `/contact`, `/blog`, `/post/how-to-prepare-for-tax-season-a-2026-guide`, `/post/best-bookkeeping-services-for-small-business-in-2026`.
 
-To learn more about Next.js, take a look at the following resources:
+## Photos
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- `jenny-portrait.jpg`, `jennys-love-logo.png`, `heart-mark.png` — from the current jennyslove.com (owner’s own media; confirm consent/rights).
+- Pexels (free under the [Pexels license](https://www.pexels.com/license/); no recognizable faces):
+  - `kc-liberty-memorial.jpg` — https://www.pexels.com/photo/7076295/
+  - `receipts-desk.jpg`, `receipts-wide.jpg` — https://www.pexels.com/photo/5900135/
+  - `desk-calculator.jpg` — https://www.pexels.com/photo/7654590/
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Hours follow Google Maps (every day 7am–8pm), per the client on 2026-10-23.
 
-## Deploy on Vercel
+## Needs owner approval before launch
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- **Portrait**: the only real photo of Jenny (from the current site). Confirm consent and photographer rights; a proper photo shoot would lift the whole site.
+- **Logo**: in use from the current site; request vector artwork.
+- **Testimonial**: Bryan K. quote reused verbatim from the current homepage; confirm permission.
+- Services/extras scope, “Northland” wording, the 3-step “How it works” (About), FAQ answers, article byline (currently the business name) and a qualified review of the tax article.
+- **Contact form**: planned on Netlify Forms; not built yet. Needs the recipient, response expectations and a privacy note. Phone/email/directions are the current paths.
+- Analytics: CTAs carry `data-event` (`consultation_cta_click`, `phone_click`, `email_click`) and push to `window.dataLayer` only if an approved tool defines it. No vendor script is installed.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Known gaps
+
+- The project folder name contains an apostrophe, which breaks Next’s file-based metadata loader; the favicon lives in `public/`, and robots/sitemap are route handlers.
+- First-load JS is ~103–112 KB (Next/React runtime) — a documented exception to the 100 KB target. No Lighthouse or field metrics have been measured.
+- Not yet tested: VoiceOver, 200%/400% zoom, real devices.

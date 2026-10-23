@@ -1,0 +1,5 @@
+[build]
+  command = "npm run build"
+  publish = ".next"
+
+# Staging stays noindex until SITE_ENV=production is set in Netlify for the authorized launch.
