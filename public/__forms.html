@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="robots" content="noindex" />
+    <title>Forms</title>
+  </head>
+  <body>
+    <!--
+      Netlify Forms detection file. Netlify scans this static file at deploy time
+      to register the "contact" form; the React form posts here. Keep the field
+      names in sync with src/components/ContactForm.tsx.
+    -->
+    <form name="contact" method="POST" data-netlify="true" netlify-honeypot="company_website" hidden>
+      <input type="hidden" name="form-name" value="contact" />
+      <input name="company_website" />
+      <input name="name" />
+      <input name="email" type="email" />
+      <input name="phone" type="tel" />
+      <input name="business" />
+      <select name="service">
+        <option>Monthly bookkeeping</option>
+      </select>
+      <textarea name="message"></textarea>
+      <input name="page" />
+    </form>
+  </body>
+</html>
