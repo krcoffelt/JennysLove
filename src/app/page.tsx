@@ -55,7 +55,7 @@ export default function Home() {
               Kansas City bookkeeping, <em className="text-heart">with love.</em>
             </h1>
             <p className="mt-6 max-w-[30rem] font-serif text-xl leading-snug text-ink-soft md:text-2xl">
-              Jenny keeps the books for small businesses, so you can get back to the work you love.
+              Jenny’s Love keeps the books for small businesses, so you can get back to the work you love.
             </p>
 
             <div className="mt-10 md:mt-auto md:pt-16">
@@ -77,10 +77,10 @@ export default function Home() {
           <div className="md:col-span-6 md:col-start-7">
             <figure>
               <Image
-                src="/media/jenny-portrait.jpg"
-                alt="Jenny, owner of Jenny’s Love Accounting, smiling outdoors among autumn trees"
-                width={700}
-                height={875}
+                src="/media/documents-desk.jpg"
+                alt="Hands reviewing business documents in a binder on a wooden desk"
+                width={1000}
+                height={1150}
                 priority
                 sizes="(min-width: 1240px) 580px, (min-width: 768px) 48vw, 100vw"
                 className="aspect-[4/5] w-full rounded-lg object-cover md:max-h-[42rem]"

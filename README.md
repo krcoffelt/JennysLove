@@ -24,11 +24,12 @@ Layout system modeled on the **Calma** Webflow template (Over Sight) — cream g
 
 ## Photos
 
-- `jenny-portrait.jpg`, `jennys-love-logo.png`, `heart-mark.png` — from the current jennyslove.com (owner’s own media; confirm consent/rights).
+- `jenny-portrait.jpg` (About page only), `jennys-love-logo.png`, `heart-mark.png` — from the current jennyslove.com (owner’s own media; confirm consent/rights).
 - Pexels (free under the [Pexels license](https://www.pexels.com/license/); no recognizable faces):
   - `kc-liberty-memorial.jpg` — https://www.pexels.com/photo/7076295/
   - `receipts-desk.jpg`, `receipts-wide.jpg` — https://www.pexels.com/photo/5900135/
   - `desk-calculator.jpg` — https://www.pexels.com/photo/7654590/
+  - `documents-desk.jpg` (home hero, cropped to exclude the face) — https://www.pexels.com/photo/8296998/
 
 Hours follow Google Maps (every day 7am–8pm), per the client on 2026-10-23.
 

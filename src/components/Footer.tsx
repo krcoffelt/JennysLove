@@ -15,11 +15,11 @@ export function Footer() {
           <div className="md:col-span-5">
             <div className="flex items-start gap-4">
               <Image
-                src="/media/jenny-portrait.jpg"
+                src="/media/heart-mark.png"
                 alt=""
-                width={56}
-                height={56}
-                className="size-14 shrink-0 rounded-full object-cover object-top"
+                width={266}
+                height={289}
+                className="mt-1 h-10 w-auto shrink-0 brightness-0 invert"
               />
               <p className="font-serif text-2xl leading-snug md:text-[1.7rem]">
                 Just one small business helping out another.
