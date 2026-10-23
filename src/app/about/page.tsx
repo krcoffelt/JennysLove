@@ -6,14 +6,14 @@ import { PillLink, Reveal, SectionLabel } from "@/components/ui";
 export const metadata: Metadata = {
   title: "Meet Jenny",
   description:
-    "Jenny brings 20+ years of accounting experience to Kansas City small businesses — a partner, not just a bookkeeper.",
+    "Jenny brings 20+ years of accounting experience to Kansas City small businesses. A partner, not just a bookkeeper.",
   alternates: { canonical: "/about" },
 };
 
-/** Proposed engagement steps — pending owner confirmation of the actual workflow. */
+/** Proposed engagement steps, pending owner confirmation of the actual workflow. */
 const steps = [
   { title: "Talk", body: "Tell Jenny where your books are today and what’s keeping you up at night." },
-  { title: "Plan", body: "Agree on the help you need — ongoing support or a one-time project." },
+  { title: "Plan", body: "Agree on the help you need, ongoing or a one-time project." },
   { title: "Rest easy", body: "Your books stay organized, and Jenny is a call away when questions come up." },
 ];
 
@@ -25,7 +25,7 @@ export default function AboutPage() {
           <div className="md:col-span-6">
             <SectionLabel>Meet Jenny</SectionLabel>
             <h1 className="mt-5 text-[2.6rem] leading-[1.07] sm:text-[3.4rem] lg:text-[4.2rem]">
-              A partner — <em className="text-heart">not just</em> a bookkeeper.
+              A partner, <em className="text-heart">not just</em> a bookkeeper.
             </h1>
 
             <div className="mt-10 max-w-lg space-y-5 font-serif text-xl leading-relaxed text-ink-soft">
@@ -35,7 +35,7 @@ export default function AboutPage() {
               </p>
               <p>It has been my pleasure to be that person for lots of companies.</p>
             </div>
-            <p className="mt-8 font-serif text-2xl italic">— Jenny</p>
+            <p className="mt-8 font-serif text-2xl italic text-heart">Jenny</p>
           </div>
 
           <div className="md:col-span-5 md:col-start-8">
@@ -56,7 +56,7 @@ export default function AboutPage() {
         <div className="site-container py-20 md:py-28">
           <Reveal>
             <p className="max-w-4xl font-serif text-3xl leading-snug md:text-[2.75rem] md:leading-[1.2]">
-              Your business is your livelihood — and maybe your employees’ too. It makes sense that it’s always on your mind.{" "}
+              Your business is your livelihood, and maybe your employees’ too. It makes sense that it’s always on your mind.{" "}
               <em className="text-blush">Jenny’s Love is here to help, so you can rest easy.</em>
             </p>
           </Reveal>
@@ -75,9 +75,8 @@ export default function AboutPage() {
 
         <ol className="mt-14 grid gap-4 md:grid-cols-3">
           {steps.map((s, i) => (
-            <Reveal as="li" key={s.title} delay={i * 80} className="rounded-xl border border-line bg-paper/60 p-8">
-              <span className="font-sans text-sm tabular-nums text-heart">{String(i + 1).padStart(2, "0")}</span>
-              <h3 className="mt-10 text-3xl">{s.title}</h3>
+            <Reveal as="li" key={s.title} delay={i * 80} className="rounded-xl bg-paper p-8">
+              <h3 className="text-3xl">{s.title}</h3>
               <p className="mt-3 font-sans text-[0.95rem] leading-relaxed text-ink-soft">{s.body}</p>
             </Reveal>
           ))}

@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 const faqs = [
   {
     q: "Will you work in the software I already use?",
-    a: "Most likely. Jenny works in QuickBooks Online and Desktop, Xero, Sage, Patriot, Gusto, ADP and more — see the full list above.",
+    a: "Most likely. Jenny works in QuickBooks Online and Desktop, Xero, Sage, Patriot, Gusto, ADP and more. See the full list above.",
   },
   {
     q: "What does it cost?",
@@ -36,7 +36,6 @@ export default function ServicesPage() {
             Practical support for your <em className="text-heart">business books.</em>
           </>
         }
-        intro="You started your business because you love what you do — not to spend all your time balancing the books."
       >
         <div className="mt-9">
           <PillLink href="/contact" event="consultation_cta_click">
@@ -59,11 +58,10 @@ export default function ServicesPage() {
 
       <section aria-label="Service details" className="site-container pb-24 md:pb-32">
         <ol className="border-t border-line">
-          {services.map((s, i) => (
+          {services.map((s) => (
             <Reveal as="li" key={s.id} className="border-b border-line">
               <article id={s.id} className="grid scroll-mt-28 gap-6 py-10 md:grid-cols-12 md:py-14">
-                <div className="flex items-baseline gap-5 md:col-span-5">
-                  <span className="font-sans text-sm tabular-nums text-ink-soft">{String(i + 1).padStart(2, "0")}</span>
+                <div className="md:col-span-5">
                   <h2 className="text-3xl leading-tight md:text-[2.4rem]">{s.title}</h2>
                 </div>
                 <div className="md:col-span-6 md:col-start-7">
@@ -86,7 +84,7 @@ export default function ServicesPage() {
           <p className="font-serif text-2xl">And a few extras</p>
           <ul className="flex flex-wrap gap-2">
             {extras.map((x) => (
-              <li key={x} className="rounded-full border border-line bg-paper/70 px-4 py-2 font-sans text-sm">
+              <li key={x} className="rounded-full bg-paper px-4 py-2 font-sans text-sm">
                 {x}
               </li>
             ))}
@@ -132,7 +130,7 @@ export default function ServicesPage() {
               <details key={f.q} className="group border-b border-line">
                 <summary className="flex min-h-16 cursor-pointer list-none items-center justify-between gap-6 py-5 font-serif text-xl [&::-webkit-details-marker]:hidden">
                   {f.q}
-                  <span aria-hidden="true" className="grid size-9 shrink-0 place-items-center rounded-full border border-line transition-transform duration-200 group-open:rotate-45">
+                  <span aria-hidden="true" className="grid size-9 shrink-0 place-items-center rounded-full bg-paper transition-transform duration-200 group-open:rotate-45">
                     +
                   </span>
                 </summary>

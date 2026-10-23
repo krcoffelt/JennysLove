@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     template: "%s | Jenny’s Love Accounting",
   },
   description:
-    "Personal, practical bookkeeping for Kansas City small businesses — monthly books, payables, receivables, payroll support and QuickBooks training.",
+    "Personal, practical bookkeeping for Kansas City small businesses: monthly books, payables, receivables, payroll support and QuickBooks training.",
   icons: { icon: "/icon.png", apple: "/apple-icon.png" },
   openGraph: { siteName: "Jenny’s Love Accounting", locale: "en_US", type: "website" },
   // Staging builds stay out of search until a separately authorized launch.

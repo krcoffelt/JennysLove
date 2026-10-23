@@ -1,6 +1,6 @@
 /**
  * Service scope as published on /our-services (F10). Wording is condensed,
- * not expanded — no tax preparation, CPA, legal or entity advice is implied.
+ * not expanded. No tax preparation, CPA, legal or entity advice is implied.
  * Pending owner approval of exact scope and exclusions.
  */
 

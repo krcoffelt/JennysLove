@@ -45,7 +45,7 @@ export function PillLink({ href, children, tone = "light", event, className = ""
   const tones =
     tone === "dark"
       ? "bg-cream text-ink shadow-[0_1px_0_rgb(0_0_0/0.05)] hover:bg-paper"
-      : "border border-line bg-paper/70 text-ink hover:bg-paper hover:shadow-[0_8px_24px_-12px_rgb(43_33_31/0.35)]";
+      : "bg-paper text-ink hover:bg-blush/50 hover:shadow-[0_8px_24px_-12px_rgb(43_33_31/0.35)]";
   const dot = tone === "dark" ? "bg-wine text-cream" : "bg-heart text-paper";
   const inner = (
     <>

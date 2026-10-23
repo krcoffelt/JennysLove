@@ -20,7 +20,6 @@ export default function ContactPage() {
             Let’s talk about <em className="text-heart">your books.</em>
           </>
         }
-        intro="Call, email or drop by the office — whatever’s easiest for you."
       />
 
       <section aria-label="Ways to reach Jenny" className="site-container pb-24 md:pb-32">
@@ -42,7 +41,7 @@ export default function ContactPage() {
             <a
               href={`mailto:${business.email.value}`}
               data-event="email_click"
-              className="group flex h-full min-h-64 flex-col justify-between rounded-xl border border-line bg-paper/70 p-8 transition-colors duration-300 hover:bg-paper md:p-10"
+              className="group flex h-full min-h-64 flex-col justify-between rounded-xl bg-paper p-8 transition-colors duration-300 hover:bg-blush/60 md:p-10"
             >
               <span className="font-sans text-xs uppercase tracking-[0.16em] text-ink-soft">Email Jenny</span>
               <span className="mt-12 flex items-end justify-between gap-4">

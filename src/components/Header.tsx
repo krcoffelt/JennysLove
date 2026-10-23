@@ -77,7 +77,7 @@ export function Header() {
           <button
             ref={buttonRef}
             type="button"
-            className="inline-flex min-h-11 items-center gap-2 rounded-full border border-line px-4 font-sans text-sm md:hidden"
+            className="inline-flex min-h-11 items-center gap-2 rounded-full bg-paper px-4 font-sans text-sm md:hidden"
             aria-expanded={open}
             aria-controls="mobile-menu"
             onClick={() => setOpen((v) => !v)}

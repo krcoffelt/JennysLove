@@ -85,7 +85,6 @@ export default async function PostPage({ params }: Props) {
 
             <div className="!mt-16 rounded-xl bg-wine p-8 text-cream md:p-10">
               <p className="font-serif text-3xl leading-tight">Want a hand with your books?</p>
-              <p className="mt-3 font-sans text-cream/75">Jenny is a call or email away.</p>
               <div className="mt-7">
                 <PillLink href="/contact" tone="dark" event="consultation_cta_click">
                   Contact Jenny

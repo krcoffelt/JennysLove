@@ -3,7 +3,7 @@
  *
  * Every value is an observation from the public research snapshot
  * (reports/rebuild-brief.md §6, inventories/business-facts.json).
- * Nothing here is owner-approved yet — keep `approval` current and
+ * Nothing here is owner-approved yet; keep `approval` current and
  * update `verified` whenever a fact is re-checked.
  */
 

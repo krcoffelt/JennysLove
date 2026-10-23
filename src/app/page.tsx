@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 
 const values = [
   { title: "A partner, not just a bookkeeper", body: "Someone who goes the extra mile to keep you organized and growing." },
-  { title: "One person who knows you", body: "Questions, worries or ideas — you always know exactly who to call." },
+  { title: "One person who knows you", body: "Questions, worries or ideas. You always know who to call." },
   { title: "Your software, your way", body: "QuickBooks, Xero, Gusto, ADP and more. No switching required." },
   { title: "Right here in Kansas City", body: "A local office in the Northland, run by a neighbor who gets it." },
 ];
@@ -47,7 +47,7 @@ export default function Home() {
         }}
       />
 
-      {/* Hero — "Meet ___" composition */}
+      {/* Hero: "Meet ___" composition */}
       <section className="site-container pb-20 pt-10 md:pb-28 md:pt-16">
         <div className="grid items-stretch gap-10 md:grid-cols-12 md:gap-8">
           <div className="flex flex-col md:col-span-6 md:py-6">
@@ -61,7 +61,7 @@ export default function Home() {
             <div className="mt-10 md:mt-auto md:pt-16">
               <p className="font-sans text-xs font-semibold uppercase tracking-[0.16em]">Meet Jenny</p>
               <p className="mt-2 max-w-sm font-sans text-[0.95rem] leading-relaxed text-ink-soft">
-                {business.experience.value}. One person who knows your business — and picks up the phone.
+                {business.experience.value}. One person who knows your business and picks up the phone.
               </p>
               <div className="mt-7 flex flex-wrap items-center gap-x-6 gap-y-3">
                 <PillLink href="/contact" event="consultation_cta_click">
@@ -98,7 +98,7 @@ export default function Home() {
         <Reveal className="flex flex-col gap-4">
           <SectionLabel>How I help</SectionLabel>
           <h2 id="help-title" className="max-w-3xl text-3xl leading-tight md:text-[2.6rem]">
-            You started your business because you love what you do — not to balance the books.
+            You started your business to do what you love, not to balance the books.
           </h2>
         </Reveal>
 
@@ -167,10 +167,6 @@ export default function Home() {
             <h2 id="visit-title" className="text-4xl italic leading-[1.1] md:text-5xl">
               Drop by, or give us a call.
             </h2>
-            <p className="mt-5 max-w-md font-sans text-ink-soft">
-              The office is in Kansas City’s Northland. Stop in or call — whichever is easier for you.
-            </p>
-
             <dl className="mt-9 space-y-5 font-sans text-[0.95rem]">
               <div className="flex gap-4">
                 <dt className="sr-only">Hours</dt>
@@ -237,21 +233,16 @@ export default function Home() {
         </Reveal>
 
         <div className="mt-12 grid gap-4 md:grid-cols-12">
-          <Reveal as="article" className="rounded-xl border border-line bg-paper/60 p-8 md:col-span-8 md:p-12">
+          <Reveal as="article" className="rounded-xl bg-paper p-8 md:col-span-8 md:p-12">
             <span aria-hidden="true" className="block font-serif text-7xl leading-[0.6] text-heart">
               “
             </span>
             <blockquote className="mt-6 font-serif text-2xl leading-snug md:text-[1.9rem]">
               I have worked with Jenny’s Love for years now. We are thoroughly pleased with all their help and knowledge. We would highly recommend. Very professional and trustworthy.
             </blockquote>
-            <p className="mt-10 flex items-center gap-3 font-sans text-[0.95rem]">
-              <span aria-hidden="true" className="grid size-10 place-items-center rounded-full bg-blush font-serif text-heart">
-                B
-              </span>
-              <span>
-                <span className="block font-semibold">Bryan K.</span>
-                <span className="text-ink-soft">Client</span>
-              </span>
+            <p className="mt-10 font-sans text-[0.95rem]">
+              <span className="block font-semibold text-heart">Bryan K.</span>
+              <span className="text-ink-soft">Client</span>
             </p>
           </Reveal>
 
