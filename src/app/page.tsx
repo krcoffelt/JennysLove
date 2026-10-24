@@ -3,6 +3,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import { business, site } from "@/content/business";
 import { services } from "@/content/services";
+import { Reviews } from "@/components/Reviews";
 import { ArrowIcon, ClockIcon, HeartGlyph, PillLink, PinIcon, Reveal, SectionLabel, TextLink } from "@/components/ui";
 
 export const metadata: Metadata = {
@@ -221,44 +222,7 @@ export default function Home() {
       </section>
 
       {/* Testimonials */}
-      <section aria-labelledby="words-title" className="site-container pb-24 md:pb-32">
-        <Reveal className="flex flex-col gap-4">
-          <SectionLabel>Testimonials</SectionLabel>
-          <h2 id="words-title" className="text-3xl leading-tight md:text-[2.6rem]">
-            Words from the heart
-          </h2>
-        </Reveal>
-
-        <div className="mt-12 grid gap-4 md:grid-cols-12">
-          <Reveal as="article" className="rounded-xl bg-paper p-8 md:col-span-8 md:p-12">
-            <span aria-hidden="true" className="block font-serif text-7xl leading-[0.6] text-heart">
-              “
-            </span>
-            <blockquote className="mt-6 font-serif text-2xl leading-snug md:text-[1.9rem]">
-              I have worked with Jenny’s Love for years now. We are thoroughly pleased with all their help and knowledge. We would highly recommend. Very professional and trustworthy.
-            </blockquote>
-            <p className="mt-10 font-sans text-[0.95rem]">
-              <span className="block font-semibold text-heart">Bryan K.</span>
-              <span className="text-ink-soft">Client</span>
-            </p>
-          </Reveal>
-
-          <Reveal className="md:col-span-4" delay={100}>
-            <a
-              href={business.googleProfile.value}
-              target="_blank"
-              rel="noopener"
-              className="group flex h-full min-h-56 flex-col justify-between rounded-xl bg-cream-2 p-8 transition-colors duration-200 hover:bg-blush"
-            >
-              <p className="font-serif text-2xl leading-snug">Read what more clients are saying on Google.</p>
-              <span className="mt-8 inline-flex items-center gap-2 font-sans text-[0.95rem]">
-                See reviews
-                <ArrowIcon className="size-5 transition-transform duration-200 group-hover:translate-x-1" />
-              </span>
-            </a>
-          </Reveal>
-        </div>
-      </section>
+      <Reviews />
     </>
   );
 }

@@ -39,7 +39,7 @@ Hours follow Google Maps (every day 7am–8pm), per the client on 2026-10-23.
 
 - **Portrait**: the only real photo of Jenny (from the current site). Confirm consent and photographer rights; a proper photo shoot would lift the whole site.
 - **Logo**: in use from the current site; request vector artwork.
-- **Testimonial**: Bryan K. quote reused verbatim from the current homepage; confirm permission.
+- **Reviews**: 18 public Google reviews quoted verbatim in `src/content/reviews.ts` (pet-sitting, truncated and tax-prep reviews excluded). No star ratings, review counts or Review schema are shown.
 - Services/extras scope, “Northland” wording, the 3-step “How it works” (About), FAQ answers, article byline (currently the business name) and a qualified review of the tax article.
 - **Contact form**: planned on Netlify Forms; not built yet. Needs the recipient, response expectations and a privacy note. Phone/email/directions are the current paths.
 - Analytics: CTAs carry `data-event` (`consultation_cta_click`, `phone_click`, `email_click`) and push to `window.dataLayer` only if an approved tool defines it. No vendor script is installed.
