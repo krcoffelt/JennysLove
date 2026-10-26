@@ -62,9 +62,19 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="flex flex-col gap-2 border-t border-cream/15 py-7 font-sans text-xs uppercase tracking-[0.12em] text-cream/60 sm:flex-row sm:justify-between">
-          <p>© {new Date().getFullYear()} {business.name.value}</p>
-          <p>Kansas City, Missouri</p>
+        <div className="flex flex-col gap-1 border-t border-cream/15 py-5 font-sans text-xs uppercase tracking-[0.12em] text-cream/70 sm:flex-row sm:items-center sm:justify-between">
+          <p className="py-2">© {new Date().getFullYear()} {business.name.value}</p>
+          <p>
+            Website created by{" "}
+            <a
+              href="https://hometownkc.agency"
+              target="_blank"
+              rel="noopener"
+              className="inline-flex min-h-11 items-center text-cream underline decoration-cream/40 underline-offset-4 transition-colors duration-200 hover:decoration-cream"
+            >
+              Hometown Marketing Agency
+            </a>
+          </p>
         </div>
       </div>
     </footer>
